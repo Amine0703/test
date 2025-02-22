@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="icon" href="IMG/LOGO.jpg" type="image/x-icon">
+    <title>E-Come</title>
+</head>
+<body>
+    
+    <header id="header">
+        <h1 style="margin-bottom: 17px;"><small style="font-size: 12px;">MWK</small>متجر الأثاث الفاخر</h1>
+      
+        <nav class="nav-bar">
+            <div class="nav-top">
+            <div class="text-logo">
+            <img src="IMG/LOGO.jpg" alt="Logo MWK">
+            <h1>M<small style="margin-right: 2px;">euble</small>W<small style="margin-right: 2px;">aheb</small>K<small>acem</small></h1>
+            </div>
+            <div class="humbrgers">
+                <div class="humbrger"></div>
+                <div class="humbrger"></div>
+                <div class="humbrger"></div>
+            </div>
+        </div>
+        <div class="">
+            <ul>
+            <li> <a href="#hero">الرئيسية</a></li>
+            <li><a href="#products">المنتجات</a></li>
+            <li><a href="#">عروض خاصة</a></li>
+            <li> <a href="#">تواصل معنا</a></li>
+        </ul>
+    </div>
+        </nav>
+    </header>
+
+  
+<main>
+    <section class="hero" id="hero">
+        <div class="hero-img">
+            <img src="IMG/Background.jpg" alt="">
+        <h2>اكتشف الفخامة والراحة في أثاثنا</h2>
+        <p>! MWK حوّل مساحتك لملاذ دافئ وأنيق مع أثاث 
+            <br>
+            نقدّم لك تصاميم خشبية فريدة تُصنع بحب وتفصيل على ذوقك.
+            سواء كان ديكور منزلك كلاسيكي ولا عصري، <br>! نحن هنا لتحويل رؤيتك إلى واقع استثنائي <br>
+            ! ابدأ رحلتك معانا اليوم وخلي كل زاوية تحكي حكاية</p>
+        </div>
+        <button>تسوق الآن</button>
+    </section>
+    <section class="categories">
+        <div class="golddivider"></div>
+        <h2>تصنيفات منتجاتنا</h2>
+        <div class="categories-list">
+        <div class="categorie-card">
+            <img src="IMG/bed.jpg" alt="قسم الغرف">
+            <h3>قسم الغرف</h3>
+            <p>كل ما تحتاجه من أجل غرفتك</p>
+            <button>تسوق الآن</button>
+        </div>
+        <div class="categorie-card">
+            <img src="IMG/sofa.jpg" alt="قسم الصالون">
+            <h3>قسم الصالون</h3>
+            <p>كل ما تحتاجه من أجل تزين صالونك</p>
+            <button>تسوق الآن</button>
+        </div>
+        <div class="categorie-card">
+            <img src="IMG/table.jpg" alt="قسم المطابخ">
+            <h3>قسم المطابخ</h3>
+            <p>كل ما تحتاجه من أجل مطبخك</p>
+            <button>تسوق الآن</button>
+        </div>
+
+
+    </div>
+    </section>
+
+    <section class="products" id = "products">
+        <div class="golddivider"></div>
+        <h2>منتجاتنا المميزة</h2>
+       
+        <div class="product-list">
+           
+            <div class="product-card">
+                <img src="IMG/sofa.jpg" alt="كنبة فاخرة">
+                <h3>كنبة فاخرة</h3>
+                <p>كنبة مريحة بتصميم عصري وألوان راقية.</p>
+                <button  onclick="selectProduct('كنبة فاخرة')">اطلب الآن</button>
+            </div>
+            <div class="product-card">
+                <img src="img/table.jpg" alt="طاولة خشبية">
+                <h3>طاولة خشبية</h3>
+                <p>طاولة أنيقة مصنوعة من أجود أنواع الخشب الطبيعي.</p>
+                <button onclick="selectProduct('طاولة خشبية')">اطلب الآن</button>
+            </div>
+            <div class="product-card">
+                <img src="img/bed.jpg" alt="سرير ملكي">
+                <h3>سرير ملكي</h3>
+                <p>سرير فاخر بتصميم كلاسيكي يضمن لك نومًا هادئًا.</p>
+                <button  onclick="selectProduct('سرير ملكي')">اطلب الآن</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="send-order">
+    <form id="orderForm" onsubmit="submitForm(event)">
+        <label for="fullName">: الاسم الكامل</label><br>
+        <input type="text" name="fullName" id="" required><br><br>
+        <label for="phone">: رقم الهاتف</label><br>
+        <input type="tel" name="phone" required><br><br>
+        <label for="address">: العنوان</label><br>
+        <input type="text" name="address" placeholder="! رجاءا ادخال الولاية و البلدية فقط" required><br><br>
+        
+        <!-- -------------------------HIDDEN-INPUT------------------------- -->
+         <input type="hidden" name="selectedProduct" id="selectedProduct">
+         <!-- <input type="hidden" name="selectedPrice" id="selectedPrice"> -->
+
+         <button type="submit">ارسال الطلبية</button>
+
+    </form>
+</div>
+
+
+
+</main>
+    <footer >
+        <div class="footer-content">
+            <div class="services">
+                <p>: نقدم لكم احسن الخدمات من</p>
+                <ul>
+                    <li>تصميم داخلي</li>
+                    <li>توصيل مجاني</li>
+                    <li>ضمان لمدة عام</li>
+                </ul>
+            </div>
+            <div class="social-medias">
+                <p>: زورونا عبر</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/share/1AHMcNadpj/">  فايسبوك </a></li>
+                    <li> <a href=""> تيك توك </a></li>
+                    <li><a href=""> انستغرام</a></li>
+                    <li><a href="https://wa.me/+213773116385"> واتساب</a></li>
+                </ul>
+            </div>
+            <div class="short-touch">
+                <p>: لمسة قصيرة</p>
+                <ul>
+                    <li><a href="#hero">الرئــيسية</a></li>
+                    <li><a href="#products">منتجاتنا مميزة</a></li>
+                    <li><a href="">قسم المطابخ</a></li>
+                    <li><a href="">قسم الغرف</a></li>
+                    <li><a href="">قسم الصالون</a></li>
+                    <li><a href="tel:0773116385">اتصل بنا</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3238.536707216751!2d0.5554530757902368!3d35.73761097256912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDQ0JzE1LjQiTiAwwrAzMycyOC45IkU!5e0!3m2!1sfr!2sdz!4v1740170426572!5m2!1sfr!2sdz" width="400" height="300"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="up-button"><a href="#header"><i class="uil uil-angle-double-up"></i></a></div>
+        <p>&copy; 2025 متجر الأثاث الفاخر - MWK - جميع الحقوق محفوظة</p>
+    </footer>
+
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
